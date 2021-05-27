@@ -1,0 +1,64 @@
+//Part 2 - the tricky part!
+// In the HTML, add 2 links called "blue" & "red".
+// *Clicking one of the 2 links should change the text to red/blue with a good matching background (keep it readable)!
+//Note: the rest of the CSS should be the same and should not be repeated, to do this you will have to use SASS variables and file imports.
+
+//Part 3 (optional)
+//Add an option to your compilation script to minify your stylesheet! Mine was below 1.6k, can you do better? Do you still remember the option
+//ls to make the filesize Human readable?
+@import 'variables';
+//@use 'variables';
+@import 'mixins';
+@import 'extend';
+
+@include bred-links;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  background-color: $theme-color;
+}
+
+a {
+  color: $link-color;
+}
+
+article {
+  section {
+    padding: $general-padding;
+    @include shadow-box;
+    @include code-box;
+
+  }
+  p {
+    color: $text-color;
+    padding: $general-padding;
+  }
+  pre {
+    background: $theme-color;
+    @include code-box(3px, 1px solid #ddd);
+    color: $secondary-color;
+    @include medium-text;
+    padding: $general-padding;
+  }
+}
+
+
+.message {
+  @extend %message-shared;
+}
+
+.warning {
+  @extend %message-shared;
+  @include warning;
+}
+
+.success {
+  @extend %message-shared;
+  @include success;
+}
+
+.error {
+  @extend %message-shared;
+  @include error;
+}

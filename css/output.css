@@ -1,0 +1,61 @@
+.error, .success, .warning, .message {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin: 16px;
+  color: #2748b3;
+  background-color: #000;
+}
+
+a {
+  font-style: italic;
+  text-decoration: none;
+}
+
+body {
+  font: 100% "Space Mono", monospace, Helvetica, sans-serif;
+  color: #2748b3;
+  background-color: #000;
+}
+
+a {
+  color: #666;
+}
+
+article section {
+  padding: 16px;
+  -webkit-box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
+  box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
+  border-radius: 4px;
+  border: 1px silver solid;
+}
+article p {
+  color: #2748b3;
+  padding: 16px;
+}
+article pre {
+  background: #000;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  color: #666;
+  font-family: monospace;
+  font-size: 15px;
+  padding: 16px;
+}
+
+.warning {
+  background-color: orange;
+  color: #2748b3;
+}
+
+.success {
+  background-color: green;
+  color: #2748b3;
+}
+
+.error {
+  background-color: red;
+  color: #2748b3;
+}
+
+/*# sourceMappingURL=output.css.map */

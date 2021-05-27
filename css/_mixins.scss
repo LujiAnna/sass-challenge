@@ -1,0 +1,43 @@
+@mixin warning {
+  background-color: orange;
+  color: $primary-color;
+}
+
+@mixin success {
+  background-color: green;
+  color: $primary-color;
+}
+
+@mixin error {
+  background-color: red;
+  color: $primary-color;
+}
+
+@mixin medium-text {
+  font: {
+    family: monospace;
+    size: 15px;
+  }
+}
+
+@mixin rounded($radius: 6px) {
+  border-radius: $radius;
+}
+
+@mixin code-box($radius: 4px , $border: 1px silver solid) {
+  @include rounded($radius);
+  border: $border ;
+}
+
+@mixin shadow-box {
+  -webkit-box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
+  box-shadow: 10px 10px 19px -4px rgba(255, 255, 255, 0.75);
+}
+
+@mixin bred-links {
+  a {
+    font-style: italic;
+    text-decoration: none;
+  }
+}
